@@ -4,9 +4,9 @@ const port = 8000;
 const app = express();
 
 
-// app.use('./opciones', opciones)
-// app.use('/opciones', opciones);
 
+app.get('/info/:biografias', (res,req) => {
+    res.sendFile(path.join(__dirname + "/Biografias.html"));
 
 app.get('/opciones/:lenguaje', (req,res) => {
     const lenguaje = req.params.lenguaje
